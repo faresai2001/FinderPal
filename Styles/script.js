@@ -2,7 +2,8 @@
 
 var button1 = document.getElementById("robotButton");
 var button2 = document.getElementById("aboutUs");
-var activityLogButton = document.getElementById("activityLogButton")
+var activityLogButton = document.getElementById("activityLogButton");
+var inventoryButton = document.getElementById("inventory");
 
 var activityLog = document.getElementById("activityLog")
 var existingLog = JSON.parse(localStorage.getItem('activityLog')) || [];
@@ -27,7 +28,14 @@ if (activityLogButton) {
     activityLogButton.addEventListener("click", function () {
         // Navigate to the "activity log" page when the button is clicked
         window.location.href = "activityLogs.php";
+        //remove the console log in the github file
         console.log("activity button clicked");
+    });
+}
+//add this if statement in the github file
+if (inventoryButton) {
+    inventoryButton.addEventListener("click", function () {
+        window.location.href = "Inventory.php";
     });
 }
 
